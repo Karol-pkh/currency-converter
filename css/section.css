@@ -1,0 +1,5 @@
+.section {
+  max-width: 560px;
+  overflow-x: auto;
+  margin: auto;
+}

@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+.body {
+  background-color: #f5faff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body__button {
+  margin: 10px;
+  text-align: right;
+}
+
+.body--dark {
+  background-color: #a5bed5;
+}

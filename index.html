@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="js/script.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body class="body js-body">
+    <div class="body__button">
+      <button class="js-body__buttonToggleTheme">
+        <span class="js-body__buttonToggleIcon">🌤</span>
+      </button>
+    </div>
+    <header><h1 class="header">Kalkulator przeliczania walut</h1></header>
+    <main>
+      <section class="section">
+        <form class="form js-form">
+          <fieldset class="form__fieldset">
+            <p>
+              <label>
+                <span class="form__lableText">Kwota*: </span>
+                <input
+                  placeholder="Wpisz kwotę"
+                  class="form__field js-amount"
+                  min="0.01"
+                  step="0.01"
+                  type="number"
+                  required
+                />
+              </label>
+            </p>
+            <p>
+              <label>
+                <span class="form__lableText js-currency">Rodzaj waluty:</span>
+                <select
+                  class="form__field form__field--select js-select"
+                  name="Waluta"
+                  step="0.01"
+                >
+                  <option value="">-- Wybierz --</option>
+                  <option value="USD">USD</option>
+                  <option value="EURO">EURO</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label>
+                <span class="form__lableText">Kurs waluty*:</span>
+                <input
+                  class="form__field js-exchangeRate"
+                  type="number"
+                  step="0.01"
+                  required
+                  min="0.01"
+                />
+              </label>
+            </p>
+            <p>
+              <label>
+                <span class="form__lableText">Wynik:</span>
+                <input class="form__field js-result" type="number" readonly />
+                <span class="form__lableCurrency"> PLN</span>
+              </label>
+            </p>
+            <p class="form__paragraph">* Pole wymagane</p>
+          </fieldset>
+          <p class="form__button">
+            <button type="submit" class="form__buttonSubmit">Przelicz</button>
+          </p>
+          <p class="form__button">
+            <button type="reset" class="form__buttonReset">
+              Resetuj wynik
+            </button>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
